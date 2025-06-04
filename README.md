@@ -54,3 +54,18 @@ Copying from template version 0.0.0.post2.dev0+8bd8ea3
     create  apps/dev
     create  apps/dev/dev-namespace.yaml
 ```
+
+Create a dev cluster
+
+```bash
+export AWS_PROFILE=development
+export GITHUB_TOKEN=$(gh auth token)
+
+eksctl create cluster -f bootstrap/eks/cluster-dev1.yaml
+```
+
+Update generated files later
+
+```
+copier update --defaults
+```
