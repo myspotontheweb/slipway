@@ -13,7 +13,7 @@ gitops:
   flux:
     gitProvider: github
     flags:
-      owner: {{gitops_repository.owner}}
-      repository: {{gitops_repository.repository}}
+      owner: {{gitops.owner}}
+      repository: {{gitops.repository}}
       branch: main
       path: clusters/{{cluster.name}}

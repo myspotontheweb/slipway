@@ -1,4 +1,4 @@
-gitops_repository:
+gitops:
   type: yaml
   default:
     owner: myspotontheweb
