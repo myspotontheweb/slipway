@@ -1,0 +1,19 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: {{cluster.name}}
+  region: {{cluster.region}}
+  version: "1.32"
+
+autoModeConfig:
+  enabled: true
+
+gitops:
+  flux:
+    gitProvider: github
+    flags:
+      owner: {{gitops_repository.owner}}
+      repository: {{gitops_repository.repository}}
+      branch: main
+      path: clusters/{{cluster.name}}

@@ -1,0 +1,26 @@
+gitops_repository:
+  type: yaml
+  default:
+    owner: myspotontheweb
+    repository: fluxcd-copier-demo
+clusters:
+  type: yaml
+  default:
+    - name: dev1
+      region: eu-west-1
+      apps: apps/dev
+      infrastructure:
+        controllers: null
+        configs: null
+    - name: staging1
+      region: eu-west-1
+      apps: apps/staging
+      infrastructure:
+        controllers: null
+        configs: null
+    - name: prod1
+      region: eu-west-1
+      apps: apps/prod
+      infrastructure:
+        controllers: null
+        configs: null
