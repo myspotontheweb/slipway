@@ -1,10 +1,12 @@
 gitops:
   type: yaml
+  multiline: true
   default:
     owner: myspotontheweb
     repository: fluxcd-copier-demo
 clusters:
   type: yaml
+  multiline: true
   default:
     - name: dev1
       region: eu-west-1
