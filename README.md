@@ -55,6 +55,14 @@ Copying from template version 0.0.0.post2.dev0+8bd8ea3
     create  apps/dev/dev-namespace.yaml
 ```
 
+Commit thses files to an empty repository
+
+```bash
+git add .
+git commit -am "Initial files"
+git push
+```
+
 Create a dev cluster
 
 ```bash
