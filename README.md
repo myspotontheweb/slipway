@@ -6,7 +6,7 @@ A copier template to create a project using FluxCD
 The following command will generate the project files
 
 ```bash
-copier copy gh:myspotontheweb/fluxcd-copier-template . --exclude LICENSE --exclude README.md
+copier copy gh:myspotontheweb/fluxcd-copier-template demo1
 ```
 ```
 Copying from template version 0.0.0.post2.dev0+8bd8ea3
