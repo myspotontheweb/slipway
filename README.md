@@ -87,8 +87,8 @@ changie batch auto
 changie merge
 
 git add .
-git commit -m "Release: $$(changie latest)"
+git commit -m "Release: $(changie latest)"
 git push
 
-gh release create $$(changie latest) --notes-file .changes/$$(changie latest).md
+gh release create $(changie latest) --notes-file .changes/$(changie latest).md
 ```
