@@ -77,3 +77,18 @@ Update generated files later
 ```
 copier update --defaults --exclude LICENSE --exclude README.md
 ```
+
+# Miscellaneous
+
+## Release
+
+```bash
+changie batch auto
+changie merge
+
+git add .
+git commit -m "Release: $$(changie latest)"
+git push
+
+gh release create $$(changie latest) --notes-file .changes/$$(changie latest).md
+```

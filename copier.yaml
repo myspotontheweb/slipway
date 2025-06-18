@@ -1,3 +1,10 @@
+_exclude:
+  - .git
+  - LICENSE
+  - README.md
+  - .changes
+  - .changie.yaml
+  - CHANGELOG.md
 gitops:
   type: yaml
   multiline: true
