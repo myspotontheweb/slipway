@@ -13,7 +13,7 @@ REPO_OWNER=my-name
 #
 # Create new repository
 #
-gh repo create $REPO_OWNER/$REPO_NAME --add-readme --description "GitOps repository using slipway template" --private --clone
+gh repo create $REPO_OWNER/$REPO_NAME --add-readme --description "GitOps repository using slipway template" --clone --private
 
 #
 # Populate the repository
