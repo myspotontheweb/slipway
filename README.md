@@ -8,7 +8,7 @@ To start a new project by creating a new repository
 
 ```bash
 REPO_NAME=slipway-demo
-REPO_OWNER=moconnor-cni
+REPO_OWNER=my-name
 
 #
 # Create new repository
