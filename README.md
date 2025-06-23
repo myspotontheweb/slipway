@@ -10,10 +10,19 @@ To start a new project by creating a new repository
 REPO_NAME=slipway-demo
 REPO_OWNER=moconnor-cni
 
+#
+# Create new repository
+#
 gh repo create $REPO_OWNER/$REPO_NAME --add-readme --description "GitOps repository using slipway template" --private --clone
 
-copier copy slipway --data repo_name=$REPO_NAME --data repo_owner=$REPO_OWNER $REPO_NAME
+#
+# Populate the repository
+#
+copier copy gh:myspotontheweb/slipway --data repo_name=$REPO_NAME --data repo_owner=$REPO_OWNER $REPO_NAME
 
+#
+# Commit files
+#
 cd $REPO_NAME
 git add .
 git commit -am "Initial commit"
