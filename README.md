@@ -32,6 +32,15 @@ git push
 Create a dev cluster, using [eksctl](https://eksctl.io/)
 
 ```bash
+#
+# Close the new repository
+#
+git clone git@github.com:myspotontheweb/slipway-demo.git
+cd slipway-demo
+
+#
+# Create a new cluster
+#
 export AWS_PROFILE=development
 export GITHUB_TOKEN=$(gh auth token)
 
