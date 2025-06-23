@@ -1,4 +1,4 @@
-# fluxcd-copier-template
+# Slipway
 
 A copier template to create a project using FluxCD
 
