@@ -5,12 +5,10 @@ _exclude:
   - .changes
   - .changie.yaml
   - CHANGELOG.md
-gitops:
-  type: yaml
-  multiline: true
-  default:
-    owner: myspotontheweb
-    repository: fluxcd-copier-demo
+repo_name:
+  type: str
+repo_owner:
+  type: str
 clusters:
   type: yaml
   multiline: true
