@@ -2,8 +2,8 @@
 
 > a slope built leading down into water, used for launching and landing boats and ships or for building and repairing them.
 
-This project is a [copier](https://copier.readthedocs.io/) template which initializes a project that uses [FluxCD](https://fluxcd.io/) to manage 
-the configuration of an [AWS EKS](https://aws.amazon.com/eks/) cluster 
+Slipway tries to simplify the setup of a new Kubernetes based software project. It is implemented as a [copier](https://copier.readthedocs.io/) template
+that creates a GitOps repository used by [FluxCD](https://fluxcd.io/) to configure EKS clusters for dev, staging and production. 
 
 # Quick start
 
