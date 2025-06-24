@@ -44,7 +44,7 @@ git -C $REPO_NAME commit -am "Initial commit"
 git -C $REPO_NAME push
 ```
 
-## Sample repository
+### Sample repository
 
 * https://github.com/myspotontheweb/slipway-demo
 
