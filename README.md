@@ -1,10 +1,15 @@
 # Slipway
 
-A copier template to create a project using FluxCD
+> a slope built leading down into water, used for launching and landing boats and ships or for building and repairing them.
+
+This project is a [copier](https://copier.readthedocs.io/) template which initializes a project that uses [FluxCD](https://fluxcd.io/) to manage 
+the configuration of an [AWS EKS](https://aws.amazon.com/eks/) cluster 
 
 # Quick start
 
-To start a new project by creating a new repository
+## Create and populate a new Github repository
+
+Start a new project by creating a new repository to manage EKS clusters
 
 ```bash
 REPO_NAME=slipway-demo
@@ -23,19 +28,16 @@ copier copy gh:myspotontheweb/slipway --data repo_name=$REPO_NAME --data repo_ow
 #
 # Commit files
 #
-cd $REPO_NAME
-git add .
-git commit -am "Initial commit"
-git push
+git -C $REPO_NAME add .
+git -C $REPO_NAME commit -am "Initial commit"
+git -C $REPO_NAME push
 ```
 
-Create a dev cluster, using [eksctl](https://eksctl.io/)
+## Create an EKS cluster
+
+The slipway repository uses the [eksctl](https://eksctl.io/) tool to launch a new EKS cluster, managed usign FluxCD
 
 ```bash
-#
-# Close the new repository
-#
-git clone git@github.com:myspotontheweb/slipway-demo.git
 cd slipway-demo
 
 #
