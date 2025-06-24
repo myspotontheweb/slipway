@@ -7,7 +7,7 @@ the configuration of an [AWS EKS](https://aws.amazon.com/eks/) cluster
 
 # Quick start
 
-# Technologies
+## Technologies
 
 * [Copier - CLI app for rendering project templates](https://copier.readthedocs.io)
 * [Git - Source Code Management](https://git-scm.com/)
