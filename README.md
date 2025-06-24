@@ -50,21 +50,16 @@ git -C $REPO_NAME push
 
 ## Create an EKS cluster
 
-The slipway repository uses the [eksctl](https://eksctl.io/) tool to launch a new EKS cluster, managed usign FluxCD
+The repository contains configuration which can be used to create an EKS cluster for dev, staging or production: 
 
 ```bash
-cd slipway-demo
-
-#
-# Create a new cluster
-#
 export AWS_PROFILE=development
 export GITHUB_TOKEN=$(gh auth token)
 
 eksctl create cluster -f bootstrap/eks/cluster-dev1.yaml
 ```
 
-Sample configuration file for eksctl
+Sample configuration file for [eksctl](https://eksctl.io/)
 
 * [bootstrap/eks/cluster-dev1.yaml](https://github.com/myspotontheweb/slipway-demo/blob/main/bootstrap/eks/cluster-dev1.yaml)
 
