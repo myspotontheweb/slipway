@@ -64,6 +64,10 @@ export GITHUB_TOKEN=$(gh auth token)
 eksctl create cluster -f bootstrap/eks/cluster-dev1.yaml
 ```
 
+Sample configuration file for eksctl
+
+* [bootstrap/eks/cluster-dev1.yaml](https://github.com/myspotontheweb/slipway-demo/blob/main/bootstrap/eks/cluster-dev1.yaml)
+
 # Miscellaneous
 
 ## Release
