@@ -7,6 +7,17 @@ the configuration of an [AWS EKS](https://aws.amazon.com/eks/) cluster
 
 # Quick start
 
+# Technologies
+
+* [Copier - CLI app for rendering project templates](https://copier.readthedocs.io)
+* [Git - Source Code Management](https://git-scm.com/)
+* [Github cli](https://cli.github.com/)
+* [eksctl - AWS EKS commandline](https://eksctl.io/)
+* [FluxCD - GitOps tool for controlling configuration](https://fluxcd.io/)
+* [Kustomize - Kubernetes YAML generator](https://kustomize.io/)
+* [Changie - Automated changelog tool for preparing releases](https://changie.dev/)
+
+
 ## Create and populate a new Github repository
 
 Start a new project by creating a new repository to manage EKS clusters
@@ -52,6 +63,14 @@ eksctl create cluster -f bootstrap/eks/cluster-dev1.yaml
 # Miscellaneous
 
 ## Release
+
+This project uses [changie](https://changie.dev/) for release management. New issues are created using this command:
+
+```bash
+changie new
+```
+
+Releases are created as follows.
 
 ```bash
 changie batch auto
