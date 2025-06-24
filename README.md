@@ -44,6 +44,10 @@ git -C $REPO_NAME commit -am "Initial commit"
 git -C $REPO_NAME push
 ```
 
+## Sample repository
+
+* https://github.com/myspotontheweb/slipway-demo
+
 ## Create an EKS cluster
 
 The slipway repository uses the [eksctl](https://eksctl.io/) tool to launch a new EKS cluster, managed usign FluxCD
