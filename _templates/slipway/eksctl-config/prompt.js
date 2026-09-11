@@ -1,4 +1,3 @@
-// _templates/generator/action/prompt.js
 module.exports = [
   {
     type: 'input',
