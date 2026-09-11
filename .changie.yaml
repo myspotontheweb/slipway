@@ -5,7 +5,6 @@ changelogPath: CHANGELOG.md
 versionExt: md
 versionFormat: '## {{.Version}} - {{.Time.Format "2006-01-02"}}'
 kindFormat: '### {{.Kind}}'
-changeFormat: '* {{.Body}}'
 kinds:
     - label: Added
       auto: minor
@@ -24,3 +23,9 @@ newlines:
     beforeChangelogVersion: 1
     endOfVersion: 1
 envPrefix: CHANGIE_
+custom:
+- key: Issue
+  label: "Github Issue"
+  type: string
+  minLength: 1
+changeFormat: '* [Issue #{{.Custom.Issue}}](https://github.com/myspotontheweb/slipway/issues/{{.Custom.Issue}}) {{.Body}}'

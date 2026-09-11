@@ -2,9 +2,9 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: {{cluster.name}}
-  region: {{cluster.region}}
-  version: "1.32"
+  name: demo
+  region: eu-west-1
+  version: "1.36"
 
 autoModeConfig:
   enabled: true
@@ -17,7 +17,7 @@ gitops:
   flux:
     gitProvider: github
     flags:
-      owner: {{repo_owner}}
-      repository: {{repo_name}}
+      owner: myspotontheweb
+      repository: slipway
       branch: main
-      path: clusters/{{cluster.name}}
+      path: flux/clusters/demo

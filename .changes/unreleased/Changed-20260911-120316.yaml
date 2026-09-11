@@ -1,0 +1,5 @@
+kind: Changed
+body: Major refactor replacing Copier with Hygen for code generation
+time: 2026-09-11T12:03:16.068237+01:00
+custom:
+    Issue: "1"
