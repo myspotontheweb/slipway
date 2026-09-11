@@ -1,0 +1,23 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: demo
+  region: eu-west-1
+  version: "1.36"
+
+autoModeConfig:
+  enabled: true
+
+addons:
+  - name: cert-manager
+    version: latest
+
+#gitops:
+#  flux:
+#    gitProvider: github
+#    flags:
+#      owner: myspotontheweb
+#      repository: slipway
+#      branch: main
+#      path: clusters/demo

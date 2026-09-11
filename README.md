@@ -6,7 +6,40 @@ Slipway tries to simplify the creation and Kubernetes based projects that use Gi
 
 # Quick start
 
-## Technologies
+## Software
+
+CLI tools are managed using [Homebrew](https://brew.sh/), which supports both MacOS and Linux. Dependencies are listed in the [Brewfile](Brewfile)
+
+```bash
+brew bundle install
+```
+
+## Launch
+
+Login to AWS
+
+```bash
+export AWS_PROFILE=myprofile
+export AWS_REGION=eu-west-1
+
+aws sso login
+```
+
+Launch an EKS cluster
+
+```bash
+hygen slipway eksctl-config
+eksctl create cluster -f eks/config/demo.yaml
+```
+
+## Cleanup
+
+```bash
+eksctl delete cluster -f eks/config/demo.yaml
+```
+
+
+# Technologies
 
 * [Git - Source Code Management](https://git-scm.com/)
 * [Hygen code generator](https://github.com/jondot/hygen)
@@ -15,10 +48,6 @@ Slipway tries to simplify the creation and Kubernetes based projects that use Gi
 * [FluxCD - GitOps tool for controlling configuration](https://fluxcd.io/)
 * [Kustomize - Kubernetes YAML generator](https://kustomize.io/)
 * [Changie - Automated changelog tool for preparing releases](https://changie.dev/)
-
-## Create and populate a new Github repository
-
-TODO
 
 # Miscellaneous
 
