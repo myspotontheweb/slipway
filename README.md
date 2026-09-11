@@ -28,8 +28,19 @@ aws sso login
 Generate configuration files
 
 ```bash
-hygen slipway eksctl-config --clusterName demo
+#
+# Generate a EKS configuration file for this cluster
+#
+hygen slipway eksctl-config --clusterName demo --githubOwner myspotontheweb --repoName slipway
+
+#
+# Configure this cluster to run various controllers
+#
 hygen slipway flux-cluster-cloudnativepg --clusterName demo
+
+#
+# The install logic for each controller
+#
 hygen slipway flux-controller-cloudnativepg
 ```
 
