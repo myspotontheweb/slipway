@@ -29,9 +29,7 @@ Generate configuration files
 
 ```bash
 hygen slipway eksctl-config --clusterName demo
-
 hygen slipway flux-cluster-cloudnativepg --clusterName demo
-
 hygen slipway flux-controller-cloudnativepg
 ```
 
