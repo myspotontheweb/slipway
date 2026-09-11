@@ -14,7 +14,7 @@ CLI tools are managed using [Homebrew](https://brew.sh/), which supports both Ma
 brew bundle install
 ```
 
-## Launch
+## Launch a cluster
 
 Login to AWS
 
@@ -25,19 +25,18 @@ export AWS_REGION=eu-west-1
 aws sso login
 ```
 
-Launch an EKS cluster
+Generate a configuration file and use this to launch an EKS cluster
 
 ```bash
-hygen slipway eksctl-config
+hygen slipway eksctl-config --clusterName demo
 eksctl create cluster -f eks/config/demo.yaml
 ```
 
-## Cleanup
+## Cleanup
 
 ```bash
 eksctl delete cluster -f eks/config/demo.yaml
 ```
-
 
 # Technologies
 
@@ -50,15 +49,6 @@ eksctl delete cluster -f eks/config/demo.yaml
 * [Changie - Automated changelog tool for preparing releases](https://changie.dev/)
 
 # Miscellaneous
-
-## Software installation
-
-CLI tools are managed using [Homebrew](https://brew.sh/), which supports both MacOS and Linux. 
-Dependencies are listed in the [Brewfile](Brewfile)
-
-```bash
-brew bundle install
-```
 
 ## Release
 
