@@ -28,4 +28,4 @@ custom:
   label: "Github Issue"
   type: string
   minLength: 1
-changeFormat: '* [{{.Custom.Issue}}](https://github.com/myspotontheweb/slipway/issues/{{.Custom.Issue}}) {{.Body}}'
+changeFormat: '* [Issue #{{.Custom.Issue}}](https://github.com/myspotontheweb/slipway/issues/{{.Custom.Issue}}) {{.Body}}'
