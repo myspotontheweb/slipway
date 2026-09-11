@@ -1,0 +1,11 @@
+---
+to: flux/infrastructure/controllers/cloudnative-pg/kustomization.yaml
+force: true
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- Namespace.yaml
+- HelmRepository.yaml
+- HelmRelease-operator.yaml
+- HelmRelease-plugin-barman.yaml

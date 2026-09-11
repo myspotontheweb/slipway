@@ -25,10 +25,21 @@ export AWS_REGION=eu-west-1
 aws sso login
 ```
 
-Generate a configuration file and use this to launch an EKS cluster
+Generate configuration files
 
 ```bash
 hygen slipway eksctl-config --clusterName demo
+
+hygen slipway flux-cluster-cloudnativepg --clusterName demo
+
+hygen slipway flux-controller-cloudnativepg
+```
+
+Launch the EKS cluster
+
+```bash
+export GITHUB_TOKEN=$(gh auth token)
+
 eksctl create cluster -f eks/config/demo.yaml
 ```
 

@@ -17,11 +17,11 @@ addons:
   - name: cert-manager
     version: latest
 
-#gitops:
-#  flux:
-#    gitProvider: github
-#    flags:
-#      owner: <%=githubOwner%>
-#      repository: <%=repoName%>
-#      branch: main
-#      path: clusters/<%=clusterName%>
+gitops:
+  flux:
+    gitProvider: github
+    flags:
+      owner: <%=githubOwner%>
+      repository: <%=repoName%>
+      branch: main
+      path: flux/clusters/<%=clusterName%>

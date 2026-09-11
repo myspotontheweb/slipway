@@ -1,0 +1,21 @@
+---
+to: flux/infrastructure/controllers/cloudnative-pg/HelmRelease-operator.yaml
+force: true
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: cnpg-operator
+  namespace: cnpg
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: cloudnative-pg
+      version: "0.29.0"
+      sourceRef:
+        kind: HelmRepository
+        name: cnpg
+        namespace: cnpg
+      interval: 12h
+  values: {}

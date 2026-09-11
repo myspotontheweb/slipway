@@ -13,11 +13,11 @@ addons:
   - name: cert-manager
     version: latest
 
-#gitops:
-#  flux:
-#    gitProvider: github
-#    flags:
-#      owner: myspotontheweb
-#      repository: slipway
-#      branch: main
-#      path: clusters/demo
+gitops:
+  flux:
+    gitProvider: github
+    flags:
+      owner: myspotontheweb
+      repository: slipway
+      branch: main
+      path: flux/clusters/demo
