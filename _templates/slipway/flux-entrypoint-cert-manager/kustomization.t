@@ -19,5 +19,5 @@ spec:
   wait: true
   postBuild:
     substitute:
-      CERT_MANAGER_VERSION: "v1.21.2"
-      TRUST_MANAGER_VERSION: "v0.25.0"
+      CERT_MANAGER_VERSION: "<%=certManagerVersion%>"
+      TRUST_MANAGER_VERSION: "<%=trustManagerVersion%>"
