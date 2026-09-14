@@ -4,7 +4,6 @@
 On a Mac running [Colima](https://colima.run/) as an alternative to Docker Desktop, [which is not open source](https://docs.docker.com/subscription-billing/desktop-license/)
 Colima can run a [k3s](https://k3s.io/) based Kubernetes cluster locally as follows
 
-
 ```bash
 colima start --kubernetes --cpus 4 --memory 8 --network-address
 ```
@@ -32,9 +31,25 @@ hygen slipway flux-entrypoint-cloudnativepg --clusterName local
 Test the YAML generation
 
 ```bash
+#
+# cert-manager 
+#
+flux build kustomization secrets-cert-manager \
+  --kustomization-file flux/clusters/local/cert-manager.yaml \
+  --path flux/secrets/local/cert-manager \
+  --dry-run
+
 flux build kustomization controller-cert-manager \
   --kustomization-file flux/clusters/local/cert-manager.yaml \
   --path flux/infrastructure/controllers/cert-manager \
+  --dry-run
+
+#
+# cloudnativepg 
+#
+flux build kustomization secrets-cloudnativepg \
+  --kustomization-file flux/clusters/local/cloudnativepg.yaml \
+  --path flux/secrets/local/cloudnativepg \
   --dry-run
 
 flux build kustomization controller-cloudnativepg \
@@ -52,7 +67,7 @@ flux bootstrap github \
    --context colima \
    --owner=myspotontheweb \
    --repository=slipway \
-   --branch=main \
+   --branch=refactor-2 \
    --path=flux/clusters/local
 ```
 

@@ -8,7 +8,7 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: refactor-1
+    branch: refactor-2
   secretRef:
     name: flux-system
   url: ssh://git@github.com/myspotontheweb/slipway

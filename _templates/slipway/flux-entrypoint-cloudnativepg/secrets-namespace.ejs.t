@@ -1,10 +1,10 @@
 ---
-to: flux/infrastructure/controllers/cert-manager/namespace.yaml
+to: flux/secrets/<%=clusterName%>/cloudnativepg/namespace.yaml
 force: true
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: cert-manager
+  name: cnpg
   labels:
     pod-security.kubernetes.io/enforce: privileged

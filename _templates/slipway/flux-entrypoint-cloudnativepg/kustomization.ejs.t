@@ -5,10 +5,31 @@ force: true
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
+  name: secrets-cloudnativepg
+  namespace: flux-system
+spec:
+  interval: 1h
+  retryInterval: 2m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: flux/secrets/<%=clusterName%>/cloudnativepg
+  prune: true
+  wait: true
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
   name: controller-cloudnativepg
   namespace: flux-system
 spec:
   dependsOn:
+    - name: secrets-cloudnativepg
     - name: controller-cert-manager
   interval: 1h
   retryInterval: 2m
