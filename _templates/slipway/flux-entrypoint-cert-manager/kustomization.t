@@ -17,3 +17,7 @@ spec:
   path: flux/infrastructure/controllers/cert-manager
   prune: true
   wait: true
+  postBuild:
+    substitute:
+      CERT_MANAGER_VERSION: "v1.21.2"
+      TRUST_MANAGER_VERSION: "v0.25.0"

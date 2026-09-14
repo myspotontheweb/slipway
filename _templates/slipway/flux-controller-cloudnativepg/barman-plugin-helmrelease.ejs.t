@@ -12,7 +12,7 @@ spec:
   chart:
     spec:
       chart: plugin-barman-cloud
-      version: "<%=barmanChartVersion%>"
+      version: "${BARMAN_PLUGIN_VERSION}"
       sourceRef:
         kind: HelmRepository
         name: cnpg

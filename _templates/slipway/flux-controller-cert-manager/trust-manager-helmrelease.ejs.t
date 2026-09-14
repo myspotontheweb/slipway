@@ -13,7 +13,7 @@ spec:
   chart:
     spec:
       chart: trust-manager
-      version: "<%=trustManagerChartVersion%>"
+      version: "${TRUST_MANAGER_VERSION}"
       sourceRef:
         kind: HelmRepository
         name: cert-manager
