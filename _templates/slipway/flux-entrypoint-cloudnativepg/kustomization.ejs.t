@@ -17,6 +17,10 @@ spec:
   path: flux/secrets/<%=clusterName%>/cloudnativepg
   prune: true
   wait: true
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
