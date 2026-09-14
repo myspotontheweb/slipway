@@ -18,7 +18,8 @@ export SOPS_CONFIG=$(git rev-parse --show-toplevel)/.sops.yaml
 echo "" > $SOPS_CONFIG
 yq -i '.creation_rules[0].path_regex = "flux/secrets/.*\.sops\.yaml$"' $SOPS_CONFIG
 yq -i '.creation_rules[0].encrypted_regex = "^(data|stringData)$"' $SOPS_CONFIG
-yq -i '.creation_rules[0].key_groups[0].age[0] += load("age.agekey.pub")' $SOPS_CONFIG
+yq -i '.creation_rules[0].key_groups[0].age[0] += load("age.agekey.pub")' $SOPS_CONFIG                      # Age public key
+yq -i '.creation_rules[0].key_groups[0].age[1] += load(strenv(HOME) + "/.ssh/id_ed25519.pub")' $SOPS_CONFIG # SSH public key
 ```
 
 ## Add a secret
