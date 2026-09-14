@@ -5,6 +5,6 @@ force: true
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: cloudnativepg
+  name: cnpg
   labels:
     pod-security.kubernetes.io/enforce: privileged

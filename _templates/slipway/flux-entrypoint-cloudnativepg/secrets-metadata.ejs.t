@@ -4,6 +4,6 @@ force: true
 ---
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: cloudnativepg
+namespace: cnpg
 resources:
 - namespace.yaml

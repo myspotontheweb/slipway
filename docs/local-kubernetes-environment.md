@@ -4,7 +4,6 @@
 On a Mac running [Colima](https://colima.run/) as an alternative to Docker Desktop, [which is not open source](https://docs.docker.com/subscription-billing/desktop-license/)
 Colima can run a [k3s](https://k3s.io/) based Kubernetes cluster locally as follows
 
-
 ```bash
 colima start --kubernetes --cpus 4 --memory 8 --network-address
 ```
