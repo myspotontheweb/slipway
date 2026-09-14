@@ -24,7 +24,6 @@ hygen slipway flux-entrypoint-cloudnativepg --clusterName local
 hygen slipway flux-controller-cert-manager
 hygen slipway flux-controller-cloudnativepg
 
-
 #
 # Commit changes so that Flux can pick them up
 #

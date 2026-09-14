@@ -5,8 +5,9 @@ force: true
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
-  name: cnpg
-  namespace: cnpg
+  name: cert-manager
+  namespace: cert-manager
 spec:
   interval: 24h
-  url: https://cloudnative-pg.github.io/charts
+  type: oci
+  url: oci://quay.io/jetstack/charts
