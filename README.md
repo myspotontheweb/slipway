@@ -71,8 +71,9 @@ eksctl delete cluster -f eks/config/demo.yaml
 
 # Documentation
 
-* [Local Kubernetes Enviornment](docs/local-kubernetes-environment.md)
+* [Local Kubernetes Environment](docs/local-kubernetes-environment.md)
 * [Release Managment](docs/release-management.md)
+* [Secrets Management](docs/secrets-managment.md)
 
 # Technologies
 
