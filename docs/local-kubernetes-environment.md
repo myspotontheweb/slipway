@@ -32,9 +32,25 @@ hygen slipway flux-entrypoint-cloudnativepg --clusterName local
 Test the YAML generation
 
 ```bash
+#
+# cert-manager 
+#
+flux build kustomization secrets-cert-manager \
+  --kustomization-file flux/clusters/local/cert-manager.yaml \
+  --path flux/secrets/local/cert-manager \
+  --dry-run
+
 flux build kustomization controller-cert-manager \
   --kustomization-file flux/clusters/local/cert-manager.yaml \
   --path flux/infrastructure/controllers/cert-manager \
+  --dry-run
+
+#
+# cloudnativepg 
+#
+flux build kustomization secrets-cloudnativepg \
+  --kustomization-file flux/clusters/local/cloudnativepg.yaml \
+  --path flux/secrets/local/cloudnativepg \
   --dry-run
 
 flux build kustomization controller-cloudnativepg \
@@ -52,7 +68,7 @@ flux bootstrap github \
    --context colima \
    --owner=myspotontheweb \
    --repository=slipway \
-   --branch=main \
+   --branch=refactor-2 \
    --path=flux/clusters/local
 ```
 
