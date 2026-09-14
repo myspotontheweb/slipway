@@ -71,6 +71,15 @@ flux bootstrap github \
    --path=flux/clusters/local
 ```
 
+Load SOPS decryption key and kick-start Flux
+
+```bash
+age-keygen -o age.agekey
+kubectl create secret generic sops-age -n flux-system --from-file age.agekey
+flux reconcile kustomization secrets-cert-manager
+flux reconcile kustomization secrets-cloudnativepg
+```
+
 Clean up
 
 ```bash
