@@ -54,6 +54,15 @@ export GITHUB_TOKEN=$(gh auth token)
 eksctl create cluster -f eks/config/demo.yaml
 ```
 
+Load SOPS decryption key and kick-start Flux
+
+```bash
+age-keygen -o age.agekey
+kubectl create secret generic sops-age -n flux-system --from-file age.agekey
+flux reconcile kustomization secrets-cert-manager
+flux reconcile kustomization secrets-cloudnativepg
+```
+
 ## Cleanup
 
 ```bash
