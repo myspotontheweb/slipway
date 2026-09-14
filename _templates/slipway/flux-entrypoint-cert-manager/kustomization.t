@@ -1,11 +1,11 @@
 ---
-to: flux/clusters/<%=clusterName%>/infrastructure-controller-cert-manager.yaml
+to: flux/clusters/<%=clusterName%>/controller-cert-manager.yaml
 force: true
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: infrastructure-controller-cert-manager
+  name: controller-cert-manager
   namespace: flux-system
 spec:
   interval: 1h

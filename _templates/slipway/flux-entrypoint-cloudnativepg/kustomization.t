@@ -1,15 +1,15 @@
 ---
-to: flux/clusters/<%=clusterName%>/infrastructure-controller-cloudnativepg.yaml
+to: flux/clusters/<%=clusterName%>/controller-cloudnativepg.yaml
 force: true
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: infrastructure-controller-cloudnativepg
+  name: controller-cloudnativepg
   namespace: flux-system
 spec:
   dependsOn:
-    - name: infrastructure-controller-cert-manager
+    - name: controller-cert-manager
   interval: 1h
   retryInterval: 2m
   timeout: 5m
