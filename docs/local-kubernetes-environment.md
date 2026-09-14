@@ -39,7 +39,7 @@ flux bootstrap github \
    --context colima \
    --owner=myspotontheweb \
    --repository=slipway \
-   --branch=main \
+   --branch=cert-manager \
    --path=flux/clusters/local
 ```
 

@@ -1,7 +1,3 @@
----
-to: flux/infrastructure/controllers/cert-manager/helmrepository.yaml
-force: true
----
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
