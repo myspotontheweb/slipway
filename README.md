@@ -58,6 +58,11 @@ eksctl create cluster -f eks/config/demo.yaml
 eksctl delete cluster -f eks/config/demo.yaml
 ```
 
+# Documentation
+
+* [Local Kubernetes Enviornment](docs/local-kubernetes-environment.md)
+* [Release Managment](docs/release-management.md)
+
 # Technologies
 
 * [Git - Source Code Management](https://git-scm.com/)
@@ -67,26 +72,3 @@ eksctl delete cluster -f eks/config/demo.yaml
 * [FluxCD - GitOps tool for controlling configuration](https://fluxcd.io/)
 * [Kustomize - Kubernetes YAML generator](https://kustomize.io/)
 * [Changie - Automated changelog tool for preparing releases](https://changie.dev/)
-
-# Miscellaneous
-
-## Release
-
-This project uses [changie](https://changie.dev/) for release management. New issues are created using this command:
-
-```bash
-changie new
-```
-
-Releases are created as follows.
-
-```bash
-changie batch auto
-changie merge
-
-git add .
-git commit -m "Release: $(changie latest)"
-git push
-
-gh release create $(changie latest) --notes-file .changes/$(changie latest).md
-```

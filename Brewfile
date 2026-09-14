@@ -46,6 +46,13 @@ brew "sops"
 brew "age"
 
 #
+# Docker tools
+#
+brew "colima"
+brew "docker"
+brew "docker-buildx"
+
+#
 # Release management
 #
 brew "changie"

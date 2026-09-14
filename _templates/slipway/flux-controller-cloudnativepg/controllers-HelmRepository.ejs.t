@@ -2,7 +2,7 @@
 to: flux/infrastructure/controllers/cloudnative-pg/HelmRepository.yaml
 force: true
 ---
-aapiVersion: source.toolkit.fluxcd.io/v1
+apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: cnpg
