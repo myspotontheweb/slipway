@@ -26,7 +26,7 @@ yq -i '.creation_rules[0].key_groups[0].age[1] += load(strenv(HOME) + "/.ssh/id_
 
 ```bash
 #
-# Generate a secret and Encrypt in place
+# Generate a secret and encrypt in place
 #
 kubectl create secret generic my-secret \
   --from-literal=username='admin' \
