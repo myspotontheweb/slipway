@@ -1,9 +1,9 @@
 ---
-to: flux/secrets/<%=clusterName%>/cert-manager/kustomization.yaml
+to: flux/secrets/<%=clusterName%>/cloudnativepg/kustomization.yaml
 force: true
 ---
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: cert-manager
+namespace: cloudnativepg
 resources:
 - namespace.yaml
