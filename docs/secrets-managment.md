@@ -44,6 +44,6 @@ rm flux/secrets/local/cloudnativepg/kustomization.yaml
 #
 # Test decryption and generation
 #
-SOPS_AGE_KEY_FILE=age.agekey sops -d flux/secrets/local/cloudnativepg/my-secret.sops.yaml
+sops -d flux/secrets/local/cloudnativepg/my-secret.sops.yaml
 kustomize build flux/secrets/local/cloudnativepg
 ```
