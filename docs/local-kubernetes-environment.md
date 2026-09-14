@@ -15,12 +15,15 @@ Generate Flux files
 #
 # Configure this cluster to run various controllers
 #
-hygen slipway flux-cluster-cloudnativepg --clusterName demo
+hygen slipway flux-entrypoint-cert-manager --clusterName local
+hygen slipway flux-entrypoint-cloudnativepg --clusterName local
 
 #
 # The install logic for each controller
 #
+hygen slipway flux-controller-cert-manager
 hygen slipway flux-controller-cloudnativepg
+
 
 #
 # Commit changes so that Flux can pick them up
@@ -37,7 +40,7 @@ flux bootstrap github \
    --owner=myspotontheweb \
    --repository=slipway \
    --branch=main \
-   --path=flux/clusters/demo
+   --path=flux/clusters/local
 ```
 
 Clean up

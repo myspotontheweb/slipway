@@ -36,7 +36,8 @@ hygen slipway eksctl-config --clusterName demo --githubOwner myspotontheweb --re
 #
 # Configure this cluster to run various controllers
 #
-hygen slipway flux-cluster-cloudnativepg --clusterName demo
+hygen slipway flux-entrypoint-cert-manager --clusterName demo
+hygen slipway flux-entrypoint-cloudnativepg --clusterName demo
 
 #
 # The install logic for each controller

@@ -1,0 +1,12 @@
+---
+to: flux/infrastructure/controllers/cloudnativepg/HelmRepository.yaml
+force: true
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: cnpg
+  namespace: cnpg
+spec:
+  interval: 24h
+  url: https://cloudnative-pg.github.io/charts
