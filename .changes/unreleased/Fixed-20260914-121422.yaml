@@ -1,0 +1,5 @@
+kind: Fixed
+body: CloudNativePG operator depends on CertManager
+time: 2026-09-14T12:14:22.077065+01:00
+custom:
+    Issue: "3"

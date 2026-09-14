@@ -1,5 +1,5 @@
 ---
-to: flux/infrastructure/controllers/cloudnative-pg/Namespace.yaml
+to: flux/infrastructure/controllers/cloudnativepg/namespace.yaml
 force: true
 ---
 apiVersion: v1

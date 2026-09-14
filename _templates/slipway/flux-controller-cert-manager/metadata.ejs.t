@@ -1,0 +1,11 @@
+---
+to: flux/infrastructure/controllers/cert-manager/kustomization.yaml
+force: true
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- namespace.yaml
+- helmrepository.yaml
+- cert-manager-helmrelease.yaml
+- trust-manager-helmrelease.yaml

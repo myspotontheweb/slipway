@@ -1,0 +1,13 @@
+---
+to: flux/infrastructure/controllers/cert-manager/helmrepository.yaml
+force: true
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: cert-manager
+  namespace: cert-manager
+spec:
+  interval: 24h
+  type: oci
+  url: oci://quay.io/jetstack/charts

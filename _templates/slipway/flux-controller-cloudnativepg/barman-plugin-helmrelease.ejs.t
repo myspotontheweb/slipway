@@ -1,5 +1,5 @@
 ---
-to: flux/infrastructure/controllers/cloudnative-pg/HelmRelease-plugin-barman.yaml
+to: flux/infrastructure/controllers/cloudnativepg/barman-plugin-helmrelease.yaml
 force: true
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
