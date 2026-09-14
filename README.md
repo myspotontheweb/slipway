@@ -29,20 +29,21 @@ Generate configuration files
 
 ```bash
 #
-# Generate a EKS configuration file for this cluster
+# The logic for each component
 #
-hygen slipway eksctl-config --clusterName demo --githubOwner myspotontheweb --repoName slipway
+hygen slipway flux-cert-manager
+hygen slipway flux-cloudnativepg
 
 #
-# Configure this cluster to run various controllers
+# Configure this cluster to run various components
 #
 hygen slipway flux-entrypoint-cert-manager --clusterName demo
 hygen slipway flux-entrypoint-cloudnativepg --clusterName demo
 
 #
-# The install logic for each controller
+# Generate a EKS configuration file for this cluster
 #
-hygen slipway flux-controller-cloudnativepg
+hygen slipway eksctl-config --clusterName demo --githubOwner myspotontheweb --repoName slipway
 ```
 
 Launch the EKS cluster
