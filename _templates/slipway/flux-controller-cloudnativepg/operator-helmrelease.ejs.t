@@ -12,7 +12,7 @@ spec:
   chart:
     spec:
       chart: cloudnative-pg
-      version: "<%=chartVersion%>"
+      version: "${CNPG_VERSION}"
       sourceRef:
         kind: HelmRepository
         name: cnpg

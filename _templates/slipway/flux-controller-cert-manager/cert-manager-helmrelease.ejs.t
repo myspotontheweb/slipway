@@ -11,7 +11,7 @@ spec:
   chart:
     spec:
       chart: cert-manager
-      version: "<%=certManagerChartVersion%>"
+      version: "${CERT_MANAGER_VERSION}"
       sourceRef:
         kind: HelmRepository
         name: cert-manager

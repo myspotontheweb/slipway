@@ -29,6 +29,20 @@ hygen slipway flux-controller-cloudnativepg
 #
 ```
 
+Test the YAML generation
+
+```bash
+flux build kustomization controller-cert-manager \
+  --kustomization-file flux/clusters/local/controller-cert-manager.yaml \
+  --path flux/infrastructure/controllers/cert-manager \
+  --dry-run
+
+flux build kustomization controller-cloudnativepg \
+  --kustomization-file flux/clusters/local/controller-cloudnativepg.yaml \
+  --path flux/infrastructure/controllers/cloudnativepg \
+  --dry-run
+```
+
 Bootstrap FluxCD
 
 ```bash

@@ -19,3 +19,7 @@ spec:
   path: flux/infrastructure/controllers/cloudnativepg
   prune: true
   wait: true
+  postBuild:
+    substitute:
+      CNPG_VERSION: "0.29.0"
+      BARMAN_PLUGIN_VERSION: "0.7.1"
