@@ -13,16 +13,16 @@ Generate Flux files
 
 ```bash
 #
-# Configure this cluster to run various controllers
+# The logic for each component
+#
+hygen slipway flux-cert-manager
+hygen slipway flux-cloudnativepg
+
+#
+# Configure this cluster to run various components
 #
 hygen slipway flux-entrypoint-cert-manager --clusterName local
 hygen slipway flux-entrypoint-cloudnativepg --clusterName local
-
-#
-# The install logic for each controller
-#
-hygen slipway flux-controller-cert-manager
-hygen slipway flux-controller-cloudnativepg
 
 #
 # Commit changes so that Flux can pick them up
@@ -33,12 +33,12 @@ Test the YAML generation
 
 ```bash
 flux build kustomization controller-cert-manager \
-  --kustomization-file flux/clusters/local/controller-cert-manager.yaml \
+  --kustomization-file flux/clusters/local/cert-manager.yaml \
   --path flux/infrastructure/controllers/cert-manager \
   --dry-run
 
 flux build kustomization controller-cloudnativepg \
-  --kustomization-file flux/clusters/local/controller-cloudnativepg.yaml \
+  --kustomization-file flux/clusters/local/cloudnativepg.yaml \
   --path flux/infrastructure/controllers/cloudnativepg \
   --dry-run
 ```

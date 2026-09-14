@@ -1,5 +1,5 @@
 ---
-to: flux/clusters/<%=clusterName%>/controller-cloudnativepg.yaml
+to: flux/clusters/<%=clusterName%>/cloudnativepg.yaml
 force: true
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1

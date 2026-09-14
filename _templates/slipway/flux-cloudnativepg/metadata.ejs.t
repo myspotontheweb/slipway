@@ -7,5 +7,5 @@ kind: Kustomization
 resources:
 - namespace.yaml
 - helmrepository.yaml
-- operator-helmrelease.yaml
+- cnpg-helmrelease.yaml
 - barman-plugin-helmrelease.yaml
