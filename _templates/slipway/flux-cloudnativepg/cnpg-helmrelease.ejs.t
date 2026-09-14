@@ -1,5 +1,5 @@
 ---
-to: flux/infrastructure/controllers/cloudnativepg/operator-helmrelease.yaml
+to: flux/infrastructure/controllers/cloudnativepg/cnpg-helmrelease.yaml
 force: true
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2

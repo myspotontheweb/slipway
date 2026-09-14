@@ -1,5 +1,5 @@
 ---
-to: flux/clusters/<%=clusterName%>/controller-cert-manager.yaml
+to: flux/clusters/<%=clusterName%>/cert-manager.yaml
 force: true
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
