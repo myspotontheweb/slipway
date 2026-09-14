@@ -1,5 +1,5 @@
 ---
-to: flux/infrastructure/controllers/cloudnativepg/HelmRepository.yaml
+to: flux/infrastructure/controllers/cloudnativepg/helmrepository.yaml
 force: true
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
