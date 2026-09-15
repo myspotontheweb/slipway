@@ -38,8 +38,7 @@ sops -e -i flux/secrets/local/cloudnativepg/my-secret.sops.yaml
 #
 # Update kustomization.yaml
 #
-rm flux/secrets/local/cloudnativepg/kustomization.yaml
-(cd flux/secrets/local/cloudnativepg; kustomize create --autodetect --namespace cnpg)
+(cd flux/secrets/local/cloudnativepg; rm kustomization.yaml; kustomize create --autodetect --namespace cnpg)
 
 #
 # Test decryption and generation
