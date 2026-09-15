@@ -13,10 +13,6 @@ metadata:
 autoModeConfig:
   enabled: true
 
-addons:
-  - name: cert-manager
-    version: latest
-
 gitops:
   flux:
     gitProvider: github
