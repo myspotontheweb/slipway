@@ -5,7 +5,7 @@ On a Mac running [Colima](https://colima.run/) as an alternative to Docker Deskt
 Colima can run a [k3s](https://k3s.io/) based Kubernetes cluster locally as follows
 
 ```bash
-colima start --kubernetes --cpus 4 --memory 8 --network-address
+colima start --profile local-dev --kubernetes --kubernetes-version v1.37.0+k3s1 --cpus 4 --memory 8 --network-address
 ```
 
 Generate Flux files
@@ -83,5 +83,5 @@ flux reconcile kustomization secrets-cloudnativepg
 Clean up
 
 ```bash
-colima delete default
+colima delete --profile local-dev
 ```
