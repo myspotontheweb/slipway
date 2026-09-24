@@ -1,0 +1,27 @@
+---
+to: flux/clusters/<%=name%>/01-controllers.yaml
+force: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: infra-controllers
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: infra-core
+  interval: 1h
+  retryInterval: 2m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: flux/infrastructure/controllers/overlays/<%=cloud%>
+  prune: true
+  wait: true
+  postBuild:
+    substitute:
+      CERT_MANAGER_VERSION: "<%=certManagerVersion%>"
+      TRUST_MANAGER_VERSION: "<%=trustManagerVersion%>"
+      CNPG_VERSION: "<%=cnpgVersion%>"
+      BARMAN_PLUGIN_VERSION: "<%=barmanPluginVersion%>"
