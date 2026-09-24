@@ -1,0 +1,10 @@
+---
+to: flux/infrastructure/configs/base/certs/bootstrap-issuer.yaml
+force: true
+---
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: selfsigned-bootstrap-issuer
+spec:
+  selfSigned: {}

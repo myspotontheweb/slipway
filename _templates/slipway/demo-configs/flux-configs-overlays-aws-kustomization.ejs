@@ -1,0 +1,8 @@
+---
+to: flux/infrastructure/configs/overlays/aws/kustomization.yaml
+force: true
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../base/certs

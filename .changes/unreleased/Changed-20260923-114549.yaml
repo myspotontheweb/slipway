@@ -1,0 +1,5 @@
+kind: Changed
+body: Refactor the repository to only hold templates
+time: 2026-09-23T11:45:49.283937+01:00
+custom:
+    Issue: "8"

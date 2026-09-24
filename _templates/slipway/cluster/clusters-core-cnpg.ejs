@@ -1,0 +1,10 @@
+---
+to: flux/infrastructure/core/<%=name%>/cnpg/namespace.yaml
+force: true
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cnpg
+  labels:
+    pod-security.kubernetes.io/enforce: baseline
